@@ -1,5 +1,3 @@
-Cartao.js
-
 import React from 'react'
 
 const Cartao = (props) => {
