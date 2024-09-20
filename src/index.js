@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import Cartao from './Cartao'
+import Pedido from './Pedido'
 
 const App = () => {
   return <div className='container border p-4'>
