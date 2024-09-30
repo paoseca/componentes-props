@@ -4,8 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import Cartao from './Cartao'
 import Pedido from './Pedido'
+import Feedback from './Feedback'
 
 const App = () => {
+  const textoOK = 'Já chegou'
+  const textoNOK = 'Ainda não chegou'
+  const funcaoOK = () =>  alert ('Agradecemos a preferencia')
+  const funcaoNOK = function() { alert('Verificaremos o ocorrido') }
+  const componenteFeedback = <Feedback
+  textoOK={textoOK} textoNOK={textoNOK} funcaoOK={funcaoOK} funcaoNOK={funcaoNOK}/>
+
   return <div className='container border p-4'>
     <div className='row'>
       <div className='col-12'>
@@ -19,6 +27,7 @@ const App = () => {
             titulo="SSD"
             descricao="SSD 256Gb"
             icone="fa-solid fa-hard-drive fa-2x"/>
+            {componenteFeedback}
         </Cartao>
       </div>
       <div className='col-sm-12 col-lg-6 col-xxl-4'>
@@ -27,6 +36,7 @@ const App = () => {
             titulo="Memória"
             descricao="Memória 16Gb"
             icone="fa-solid fa-memory fa-2x" />
+            {componenteFeedback}
         </Cartao>
       </div>
       <div className='col-sm-12 col-lg-12 col-xxl-4'>
@@ -35,6 +45,8 @@ const App = () => {
               titulo="Foguete"
               descricao="Foguete de verdade"
               icone="fa-solid fa-shuttle-space fa-2x" /> 
+              {componenteFeedback} 
+              
         </Cartao>
       </div>      
     </div>
